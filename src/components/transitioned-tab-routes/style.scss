@@ -1,0 +1,50 @@
+.router-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  $timeout: 300ms;
+
+  .slide-tab-enter {
+    opacity: 0;
+    transform: translate3d(20%, 0, 0);
+  }
+
+  .slide-tab-enter-active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transition: all $timeout;
+  }
+
+  .slide-tab-exit {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  .slide-tab-exit-active {
+    opacity: 0;
+    transform: translate3d(-20%, 0, 0);
+    transition: all .5s;
+  }
+
+  .slide-tab-reverse-enter {
+    opacity: 0;
+    transform: translate3d(-20%, 0, 0);
+  }
+
+  .slide-tab-reverse-enter-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: all $timeout;
+  }
+
+  .slide-tab-reverse-exit {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .slide-tab-reverse-exit-active {
+    opacity: 0;
+    transform: translate3d(20%, 0, 0);
+    transition: all $timeout;
+  }
+}
